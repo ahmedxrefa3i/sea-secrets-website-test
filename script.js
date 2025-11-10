@@ -1,4 +1,4 @@
-// Header scroll effect
+
 const header = document.getElementById('header');
 let lastScroll = 0;
 
@@ -14,7 +14,7 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Mobile menu toggle
+
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
@@ -40,7 +40,7 @@ mobileNavLinks.forEach(link => {
     });
 });
 
-// Smooth scroll for anchor links
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -54,7 +54,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add animation on scroll for trip cards
+
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -69,7 +69,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all trip cards
+
 document.addEventListener('DOMContentLoaded', () => {
     const tripCards = document.querySelectorAll('.trip-card');
     tripCards.forEach((card, index) => {
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(card);
     });
     
-    // Observe feature cards
+    
     const featureCards = document.querySelectorAll('.feature-card');
     featureCards.forEach((card, index) => {
         card.style.opacity = '0';
