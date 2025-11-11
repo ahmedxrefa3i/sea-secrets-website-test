@@ -251,17 +251,22 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('images/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    overflow: hidden;
 }
 
-.hero-overlay {
+.hero-video {
     position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.7), rgba(30, 58, 138, 0.6));
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    object-fit: cover;
 }
+
 
 .hero-container {
     position: relative;
