@@ -1,0 +1,8 @@
+# Netlify Configuration File
+
+[build]
+  publish = "."
+  
+# Form settings
+[[plugins]]
+  package = "@netlify/plugin-forms"
