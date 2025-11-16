@@ -48,37 +48,108 @@
         <div class="hero-overlay"></div>
         <div class="container hero-container">
             <h1 class="hero-title">Discover the Secrets of the Red Sea</h1>
-            <p class="hero-subtitle">Experience unforgettable adventures in the crystal-clear waters of Hurghada</p>
-            <a href="#trips" class="btn btn-primary btn-large">Explore Our Trips</a>
+            <p class="hero-subtitle">Book your unforgettable sea adventure in Hurghada today</p>
+            
+            <!-- Search Card -->
+            <div class="search-card">
+                <div class="search-grid">
+                    <div class="search-field">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <div class="search-input-wrapper">
+                            <label>Destination</label>
+                            <input type="text" value="Hurghada" readonly>
+                        </div>
+                    </div>
+                    
+                    <div class="search-field">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <div class="search-input-wrapper">
+                            <label>When</label>
+                            <input type="date">
+                        </div>
+                    </div>
+                    
+                    <div class="search-field">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <div class="search-input-wrapper">
+                            <label>Guests</label>
+                            <input type="number" value="2" min="1">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn btn-search" onclick="document.getElementById('trips').scrollIntoView({behavior: 'smooth'})">
+                    Explore Available Trips
+                </button>
+            </div>
+            
+            <!-- Trust Indicators -->
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <span class="check-icon">✓</span>
+                    <span>Professional Guides</span>
+                </div>
+                <div class="trust-item">
+                    <span class="check-icon">✓</span>
+                    <span>All Equipment Included</span>
+                </div>
+                <div class="trust-item">
+                    <span class="check-icon">✓</span>
+                    <span>Delicious Meals</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-mouse"></div>
         </div>
     </section>
 
     <!-- Features Section -->
     <section class="features">
         <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Sea Secrets?</h2>
+                <p class="section-subtitle">We're committed to providing you with the best Red Sea experience</p>
+            </div>
+            
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🏝️</div>
-                    <h3 class="feature-title">Paradise Islands</h3>
-                    <p class="feature-text">Visit the most beautiful islands in the Red Sea</p>
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">Safety First</h3>
+                    <p class="feature-description">Professional guides and top-quality equipment for your safety</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">🤿</div>
-                    <h3 class="feature-title">Snorkeling & Diving</h3>
-                    <p class="feature-text">Explore vibrant coral reefs and marine life</p>
+                    <div class="feature-icon">🏆</div>
+                    <h3 class="feature-title">Expert Guides</h3>
+                    <p class="feature-description">Certified instructors with years of Red Sea experience</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">🐬</div>
-                    <h3 class="feature-title">Dolphin Encounters</h3>
-                    <p class="feature-text">Swim with dolphins in their natural habitat</p>
+                    <div class="feature-icon">🍽️</div>
+                    <h3 class="feature-title">Delicious Meals</h3>
+                    <p class="feature-description">Fresh buffet lunch included with every trip</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">⚓</div>
-                    <h3 class="feature-title">Professional Crew</h3>
-                    <p class="feature-text">Experienced guides ensure your safety and fun</p>
+                    <div class="feature-icon">📸</div>
+                    <h3 class="feature-title">Unforgettable Memories</h3>
+                    <p class="feature-description">Capture stunning underwater moments and island views</p>
                 </div>
             </div>
         </div>
@@ -88,250 +159,252 @@
     <section id="trips" class="trips">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our Amazing Trips</h2>
-                <p class="section-subtitle">Choose your perfect Red Sea adventure</p>
+                <h2 class="section-title">Our Signature Trips</h2>
+                <p class="section-subtitle">Choose from our carefully curated selection of Red Sea adventures. Each trip is designed to give you an unforgettable experience.</p>
             </div>
             
-            <div class="trips-grid">
+            <div class="trips-list">
                 <!-- Trip 1: Hula Hula Island -->
                 <div class="trip-card">
-                    <div class="trip-image-container">
-                        <img src="images/hula-hula.jpg" alt="Hula Hula Island" class="trip-image">
-                        <div class="trip-badge">Popular</div>
-                    </div>
-                    <div class="trip-content">
-                        <h3 class="trip-title">Hula Hula Island Sea Trip</h3>
-                        <p class="trip-description">Experience the pristine beauty of Hula Hula Island with its white sandy beaches and crystal-clear turquoise waters</p>
-                        
-                        <div class="trip-details">
-                            <div class="trip-detail-item">
-                                <span class="detail-icon">⏰</span>
-                                <span class="detail-text">Full Day</span>
-                            </div>
+                    <div class="trip-image">
+                        <img src="images/island1.jpg" alt="Hula Hula Island">
+                        <div class="trip-duration">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Full Day</span>
                         </div>
-                        
+                    </div>
+                    <div class="trip-details">
+                        <h3 class="trip-title">Hula Hula Island Sea Trip</h3>
+                        <p class="trip-description">Experience the crystal clear shallows and white sands of Hula Hula Island</p>
                         <ul class="trip-highlights">
-                            <li>✓ Departure at 9 AM</li>
-                            <li>✓ Visit Hula Hula Island (pristine beaches, turquoise waters)</li>
-                            <li>✓ First snorkeling spot with colorful coral reefs</li>
-                            <li>✓ Delicious open buffet lunch on board</li>
-                            <li>✓ Second snorkeling site to spot schools of tropical fish</li>
-                            <li>✓ Return to the marina</li>
+                            <li>Departure at 9 AM</li>
+                            <li>Visit Hula Hula Island (crystal clear shallows, white sands)</li>
+                            <li>First snorkeling stop to explore colorful coral gardens</li>
+                            <li>Open buffet lunch on board (dishes, drinks, fresh fruit)</li>
+                            <li>Second snorkeling site to spot schools of tropical fish</li>
+                            <li>Return to the marina</li>
                         </ul>
-                        
+                    </div>
+                    <div class="trip-booking">
                         <div class="trip-price">
                             <span class="price-label">Starting from</span>
                             <span class="price-value">Price on Request</span>
                         </div>
                         <button onclick="openBookingModal('Hula Hula Island Sea Trip')" class="btn btn-book">Book Now</button>
-                        <p class="booking-note">Instant confirmation via email</p>
+                        <p class="booking-note">Instant confirmation via Email</p>
                     </div>
                 </div>
 
                 <!-- Trip 2: Magawish Island -->
                 <div class="trip-card">
-                    <div class="trip-image-container">
-                        <img src="images/magawish.jpg" alt="Magawish Island" class="trip-image">
+                    <div class="trip-image">
+                        <img src="images/magawish.jpg" alt="Magawish Island">
+                        <div class="trip-duration">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Full Day</span>
+                        </div>
                     </div>
-                    <div class="trip-content">
+                    <div class="trip-details">
                         <h3 class="trip-title">Magawish Island Sea Trip</h3>
                         <p class="trip-description">Discover the golden sands and turquoise waters of Magawish Island</p>
-                        
-                        <div class="trip-details">
-                            <div class="trip-detail-item">
-                                <span class="detail-icon">⏰</span>
-                                <span class="detail-text">Full Day</span>
-                            </div>
-                        </div>
-                        
                         <ul class="trip-highlights">
-                            <li>✓ Departure at 9 AM</li>
-                            <li>✓ Visit Magawish Island (golden sands, turquoise waters)</li>
-                            <li>✓ First snorkeling spot with vibrant coral formations</li>
-                            <li>✓ Delicious open buffet lunch on board</li>
-                            <li>✓ Second snorkeling location to continue the adventure</li>
-                            <li>✓ Return to the marina</li>
+                            <li>Departure at 9 AM</li>
+                            <li>Visit Magawish Island (golden sands, turquoise waters)</li>
+                            <li>First snorkeling spot with vibrant coral formations</li>
+                            <li>Delicious open buffet lunch on board</li>
+                            <li>Second snorkeling location to continue the adventure</li>
+                            <li>Return to the marina</li>
                         </ul>
-                        
+                    </div>
+                    <div class="trip-booking">
                         <div class="trip-price">
                             <span class="price-label">Starting from</span>
                             <span class="price-value">Price on Request</span>
                         </div>
                         <button onclick="openBookingModal('Magawish Island Sea Trip')" class="btn btn-book">Book Now</button>
-                        <p class="booking-note">Instant confirmation via email</p>
+                        <p class="booking-note">Instant confirmation via Email</p>
                     </div>
                 </div>
 
                 <!-- Trip 3: Orange Island -->
                 <div class="trip-card">
-                    <div class="trip-image-container">
-                        <img src="images/orange.jpg" alt="Orange Island" class="trip-image">
+                    <div class="trip-image">
+                        <img src="images/orange.jpg" alt="Orange Island">
+                        <div class="trip-duration">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Full Day</span>
+                        </div>
                     </div>
-                    <div class="trip-content">
+                    <div class="trip-details">
                         <h3 class="trip-title">Orange Island Sea Trip</h3>
                         <p class="trip-description">Enjoy the shallow turquoise waters and iconic orange parasols</p>
-                        
-                        <div class="trip-details">
-                            <div class="trip-detail-item">
-                                <span class="detail-icon">⏰</span>
-                                <span class="detail-text">Full Day</span>
-                            </div>
-                        </div>
-                        
                         <ul class="trip-highlights">
-                            <li>✓ Departure at 9 AM</li>
-                            <li>✓ Visit Orange Island (shallow waters, orange parasols)</li>
-                            <li>✓ First snorkeling stop to explore underwater beauty</li>
-                            <li>✓ Delicious open buffet lunch on board</li>
-                            <li>✓ Second snorkeling site for more marine discoveries</li>
-                            <li>✓ Return to the marina</li>
+                            <li>Departure at 9 AM</li>
+                            <li>Visit Orange Island (shallow turquoise waters, orange parasols)</li>
+                            <li>First snorkeling site to explore coral gardens</li>
+                            <li>Freshly prepared open buffet lunch on board</li>
+                            <li>Second snorkeling location among tropical fish</li>
+                            <li>Return to the marina</li>
                         </ul>
-                        
+                    </div>
+                    <div class="trip-booking">
                         <div class="trip-price">
                             <span class="price-label">Starting from</span>
                             <span class="price-value">Price on Request</span>
                         </div>
                         <button onclick="openBookingModal('Orange Island Sea Trip')" class="btn btn-book">Book Now</button>
-                        <p class="booking-note">Instant confirmation via email</p>
+                        <p class="booking-note">Instant confirmation via Email</p>
                     </div>
                 </div>
 
                 <!-- Trip 4: Deep Sea Diving -->
                 <div class="trip-card">
-                    <div class="trip-image-container">
-                        <img src="images/diving.jpg" alt="Deep Sea Diving" class="trip-image">
-                        <div class="trip-badge">Adventure</div>
-                    </div>
-                    <div class="trip-content">
-                        <h3 class="trip-title">Deep Sea Diving Trip</h3>
-                        <p class="trip-description">Explore the depths of the Red Sea with professional diving instructors</p>
-                        
-                        <div class="trip-details">
-                            <div class="trip-detail-item">
-                                <span class="detail-icon">⏰</span>
-                                <span class="detail-text">Full Day</span>
-                            </div>
+                    <div class="trip-image">
+                        <img src="images/diving.jpg" alt="Deep Sea Diving">
+                        <div class="trip-duration">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Full Day</span>
                         </div>
-                        
+                    </div>
+                    <div class="trip-details">
+                        <h3 class="trip-title">Deep Sea Diving Trip</h3>
+                        <p class="trip-description">Explore the underwater world with certified diving instructors</p>
                         <ul class="trip-highlights">
-                            <li>✓ Departure at 9 AM</li>
-                            <li>✓ Professional diving briefing and equipment setup</li>
-                            <li>✓ First diving site (explore coral walls and caves)</li>
-                            <li>✓ Delicious open buffet lunch on board</li>
-                            <li>✓ Second diving location (discover shipwrecks or reefs)</li>
-                            <li>✓ Return to the marina</li>
+                            <li>Departure at 9 AM</li>
+                            <li>First guided dive with a certified instructor</li>
+                            <li>Explore coral walls and diverse marine life</li>
+                            <li>(Snorkeling option available for non-divers)</li>
+                            <li>Freshly prepared open buffet lunch on board</li>
+                            <li>Second guided dive at a different site</li>
+                            <li>Return to the marina</li>
                         </ul>
-                        
+                    </div>
+                    <div class="trip-booking">
                         <div class="trip-price">
                             <span class="price-label">Starting from</span>
                             <span class="price-value">Price on Request</span>
                         </div>
                         <button onclick="openBookingModal('Deep Sea Diving Trip')" class="btn btn-book">Book Now</button>
-                        <p class="booking-note">Instant confirmation via email</p>
+                        <p class="booking-note">Instant confirmation via Email</p>
                     </div>
                 </div>
 
                 <!-- Trip 5: Dolphin Sea Trip -->
                 <div class="trip-card">
-                    <div class="trip-image-container">
-                        <img src="images/dolphin.jpg" alt="Dolphin Sea Trip" class="trip-image">
-                        <div class="trip-badge">Unique</div>
-                    </div>
-                    <div class="trip-content">
-                        <h3 class="trip-title">Dolphin Sea Trip</h3>
-                        <p class="trip-description">Swim with wild dolphins in their natural habitat</p>
-                        
-                        <div class="trip-details">
-                            <div class="trip-detail-item">
-                                <span class="detail-icon">⏰</span>
-                                <span class="detail-text">Full Day</span>
-                            </div>
+                    <div class="trip-image">
+                        <img src="images/dolphin.jpg" alt="Dolphin Trip">
+                        <div class="trip-duration">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Full Day</span>
                         </div>
-                        
+                    </div>
+                    <div class="trip-details">
+                        <h3 class="trip-title">Dolphin Sea Trip</h3>
+                        <p class="trip-description">Swim alongside wild dolphins in their natural habitat</p>
                         <ul class="trip-highlights">
-                            <li>✓ Departure at 9 AM</li>
-                            <li>✓ Dolphin spotting and swimming experience</li>
-                            <li>✓ First snorkeling site with vibrant marine life</li>
-                            <li>✓ Delicious open buffet lunch on board</li>
-                            <li>✓ Second snorkeling stop to explore more reefs</li>
-                            <li>✓ Return to the marina</li>
+                            <li>Departure at 9 AM</li>
+                            <li>Cruise to the Dolphin House lagoon</li>
+                            <li>Chance to swim alongside wild dolphins</li>
+                            <li>First snorkeling stop at the Dolphin House reef</li>
+                            <li>Freshly prepared open buffet lunch on board</li>
+                            <li>Second snorkeling spot in the area</li>
+                            <li>Return to the marina</li>
                         </ul>
-                        
+                    </div>
+                    <div class="trip-booking">
                         <div class="trip-price">
                             <span class="price-label">Starting from</span>
                             <span class="price-value">Price on Request</span>
                         </div>
                         <button onclick="openBookingModal('Dolphin Sea Trip')" class="btn btn-book">Book Now</button>
-                        <p class="booking-note">Instant confirmation via email</p>
+                        <p class="booking-note">Instant confirmation via Email</p>
                     </div>
                 </div>
 
                 <!-- Trip 6: Paradise Island -->
                 <div class="trip-card">
-                    <div class="trip-image-container">
-                        <img src="images/paradise.jpg" alt="Paradise Island" class="trip-image">
-                    </div>
-                    <div class="trip-content">
-                        <h3 class="trip-title">Paradise Island Sea Trip</h3>
-                        <p class="trip-description">Escape to a tropical paradise with stunning beaches and coral reefs</p>
-                        
-                        <div class="trip-details">
-                            <div class="trip-detail-item">
-                                <span class="detail-icon">⏰</span>
-                                <span class="detail-text">Full Day</span>
-                            </div>
+                    <div class="trip-image">
+                        <img src="images/paradise.jpg" alt="Paradise Island">
+                        <div class="trip-duration">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Full Day</span>
                         </div>
-                        
+                    </div>
+                    <div class="trip-details">
+                        <h3 class="trip-title">Paradise Island Sea Trip</h3>
+                        <p class="trip-description">Relax on white sands in the Giftun Islands National Park</p>
                         <ul class="trip-highlights">
-                            <li>✓ Departure at 9 AM</li>
-                            <li>✓ Visit Paradise Island (stunning beaches, palm trees)</li>
-                            <li>✓ First snorkeling spot with colorful fish</li>
-                            <li>✓ Delicious open buffet lunch on board</li>
-                            <li>✓ Second snorkeling site for more exploration</li>
-                            <li>✓ Return to the marina</li>
+                            <li>Departure at 9 AM</li>
+                            <li>Cruise to Paradise Island (Giftun Islands National Park)</li>
+                            <li>Relax on white sands and swim in teal lagoons</li>
+                            <li>First snorkeling stop off the island</li>
+                            <li>Freshly prepared open buffet lunch on board</li>
+                            <li>Second snorkeling site (chance to see rays or turtles)</li>
+                            <li>Return to the marina</li>
                         </ul>
-                        
+                    </div>
+                    <div class="trip-booking">
                         <div class="trip-price">
                             <span class="price-label">Starting from</span>
                             <span class="price-value">Price on Request</span>
                         </div>
                         <button onclick="openBookingModal('Paradise Island Sea Trip')" class="btn btn-book">Book Now</button>
-                        <p class="booking-note">Instant confirmation via email</p>
+                        <p class="booking-note">Instant confirmation via Email</p>
                     </div>
                 </div>
 
                 <!-- Trip 7: Private Speedboat (Special) -->
-                <div class="trip-card special-card">
-                    <div class="trip-image-container">
-                        <img src="images/speedboat.jpg" alt="Private Speedboat" class="trip-image">
-                        <div class="trip-badge special-badge">Exclusive</div>
-                    </div>
-                    <div class="trip-content">
-                        <h3 class="trip-title">Private Speedboat Trip</h3>
-                        <p class="trip-description">Experience luxury with your own private speedboat adventure</p>
-                        
-                        <div class="trip-details">
-                            <div class="trip-detail-item">
-                                <span class="detail-icon">⏰</span>
-                                <span class="detail-text">Full Day</span>
-                            </div>
+                <div class="trip-card special-trip">
+                    <div class="trip-image">
+                        <img src="images/speedboat.jpg" alt="Private Speedboat">
+                        <div class="special-badge">
+                            <span>✨ Special Offer</span>
                         </div>
-                        
+                        <div class="trip-duration">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>3 Hours</span>
+                        </div>
+                    </div>
+                    <div class="trip-details">
+                        <h3 class="trip-title special-title">Private Speedboat Trip</h3>
+                        <p class="trip-description">Your own private adventure with complete freedom to explore</p>
                         <ul class="trip-highlights">
-                            <li>✓ Private speedboat with professional captain</li>
-                            <li>✓ Customize your itinerary (choose your islands)</li>
-                            <li>✓ Multiple snorkeling stops at your preferred locations</li>
-                            <li>✓ Exclusive catering options available</li>
-                            <li>✓ Water sports activities (optional)</li>
-                            <li>✓ Flexible departure and return times</li>
+                            <li>Duration: 3 Hours (Flexible time 9am-2pm)</li>
+                            <li>Group Size: Up to 6 People</li>
+                            <li>Complete freedom to explore at your own pace</li>
+                            <li>Visit islands or snorkel at secluded reefs</li>
+                            <li>Perfect for couples, families, or small groups</li>
+                            <li>Includes snorkeling equipment and refreshments</li>
                         </ul>
-                        
+                    </div>
+                    <div class="trip-booking">
                         <div class="trip-price">
                             <span class="price-label">Starting from</span>
                             <span class="price-value special-price">Your Private Trip</span>
                         </div>
                         <button onclick="openBookingModal('Private Speedboat Trip')" class="btn btn-book special-btn">Book Now</button>
-                        <p class="booking-note">Instant confirmation via email</p>
+                        <p class="booking-note">Instant confirmation via Email</p>
                     </div>
                 </div>
             </div>
@@ -351,7 +424,7 @@
                     <h3 class="footer-title">Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#trips">Our Trips</a></li>
-                        <a href="https://wa.me/201110890202" target="_blank">Contact Us</a>
+                        <li><a href="https://wa.me/201110890202" target="_blank">Contact Us</a></li>
                     </ul>
                 </div>
                 
@@ -397,65 +470,60 @@
                 <button class="modal-close" onclick="closeBookingModal()">&times;</button>
             </div>
             
-            <form id="bookingForm" class="booking-form" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
-                <!-- Web3Forms Access Key -->
-                <input type="hidden" name="access_key" value="f29e76b1-d5a1-464f-9915-272cc4057ebe">
-                
-                <!-- Email Configuration -->
-                <input type="hidden" name="subject" value="New Booking Request from Sea Secrets!">
-                <input type="hidden" name="from_name" value="Sea Secrets Booking System">
-                <input type="hidden" name="redirect" value="https://sea-secrets.com/thank-you.html">
+            <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" class="booking-form" id="bookingForm">
+                <!-- Honeypot for spam protection -->
+                <p style="display:none;">
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
                 
                 <!-- Trip Name (Hidden) -->
-                <input type="hidden" id="tripName" name="Trip Name">
+                <input type="hidden" id="tripName" name="trip-name">
+                
+                <!-- Email for notifications -->
+                <input type="hidden" name="_to" value="sea.secrets01@gmail.com">
                 
                 <div class="form-group">
                     <label for="fullName">Full Name *</label>
-                    <input type="text" id="fullName" name="Full Name" required>
+                    <input type="text" id="fullName" name="full-name" required>
                 </div>
                 
                 <div class="form-group">
                     <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="Email" required>
+                    <input type="email" id="email" name="email" required>
                 </div>
                 
                 <div class="form-group">
                     <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" name="Phone Number" required>
+                    <input type="tel" id="phone" name="phone" required>
                 </div>
                 
                 <div class="form-row">
                     <div class="form-group">
                         <label for="bookingDate">Preferred Date *</label>
-                        <input type="date" id="bookingDate" name="Preferred Date" required>
+                        <input type="date" id="bookingDate" name="booking-date" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="numberOfGuests">Number of Guests *</label>
-                        <input type="number" id="numberOfGuests" name="Number of Guests" min="1" max="50" required>
+                        <input type="number" id="numberOfGuests" name="number-of-guests" min="1" max="50" required>
                     </div>
                 </div>
                 
                 <div class="form-group">
                     <label for="passportImage">Passport Image *</label>
-                    <input type="file" id="passportImage" name="Passport Image" accept="image/*,.pdf" required>
-                    <small class="form-help">Upload a clear photo of your passport (Max 5MB)</small>
+                    <input type="file" id="passportImage" name="passport-image" accept="image/*,.pdf" required>
+                    <small class="form-help">Upload a clear photo of your passport (Max 10MB)</small>
                 </div>
                 
                 <div class="form-group">
                     <label for="specialRequests">Special Requests (Optional)</label>
-                    <textarea id="specialRequests" name="Special Requests" rows="3"></textarea>
+                    <textarea id="specialRequests" name="special-requests" rows="3"></textarea>
                 </div>
-                
-                <!-- Anti-spam -->
-                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                 
                 <div class="form-actions">
                     <button type="button" class="btn btn-secondary" onclick="closeBookingModal()">Cancel</button>
                     <button type="submit" class="btn btn-primary">Submit Booking</button>
                 </div>
-                
-                <div id="formMessage" class="form-message"></div>
             </form>
         </div>
     </div>
