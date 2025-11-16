@@ -77,6 +77,23 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ========================================
+// Form Submission Handler
+// ========================================
+
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    const submitButton = this.querySelector('button[type="submit"]');
+    const formMessage = document.getElementById('formMessage');
+    
+    // Disable submit button
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
+    
+    // Clear previous messages
+    formMessage.className = 'form-message';
+    formMessage.textContent = '';
+});
+
+// ========================================
 // Smooth Scroll Animation
 // ========================================
 
@@ -132,4 +149,4 @@ document.getElementById('passportImage').addEventListener('change', function(e) 
 });
 
 console.log('Sea Secrets Booking System Loaded Successfully! 🌊');
-console.log('Using FormSubmit for email delivery');
+console.log('Using Web3Forms for email delivery');
