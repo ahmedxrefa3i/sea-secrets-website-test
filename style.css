@@ -251,20 +251,10 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-}
-
-.hero-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-    object-fit: cover;
+    background-image: url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .hero-overlay {
@@ -822,28 +812,36 @@ html {
     scroll-behavior: smooth;
 }
 
-
 /* ========================================
-   Booking Modal
+   Booking Modal Styles
    ======================================== */
 
 .modal {
     display: none;
     position: fixed;
-    z-index: 10000;
+    z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
-    animation: fadeIn 0.3s ease;
+    animation: fadeInModal 0.3s ease;
 }
 
 .modal.active {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .modal-content {
@@ -854,14 +852,16 @@ html {
     max-height: 90vh;
     overflow-y: auto;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    animation: slideUp 0.3s ease;
+    animation: slideUpModal 0.3s ease;
 }
 
-@keyframes fadeIn {
+@keyframes slideUpModal {
     from {
+        transform: translateY(50px);
         opacity: 0;
     }
     to {
+        transform: translateY(0);
         opacity: 1;
     }
 }
@@ -875,9 +875,9 @@ html {
 }
 
 .modal-header h2 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: #1e3a8a;
     margin: 0;
 }
 
@@ -887,18 +887,20 @@ html {
     font-size: 2rem;
     color: #6b7280;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    line-height: 1;
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
 }
 
 .modal-close:hover {
-    background: #f3f4f6;
-    color: var(--primary-color);
+    background-color: #f3f4f6;
+    color: #1e3a8a;
 }
 
 .booking-form {
@@ -907,6 +909,12 @@ html {
 
 .form-group {
     margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
 .form-group label {
@@ -918,41 +926,32 @@ html {
 }
 
 .form-group input,
-.form-group textarea,
-.form-group select {
+.form-group textarea {
     width: 100%;
     padding: 0.75rem 1rem;
     border: 2px solid #e5e7eb;
     border-radius: 0.5rem;
     font-size: 1rem;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s;
 }
 
 .form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
+.form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    border-color: #1e3a8a;
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
 }
 
 .form-group input[type="file"] {
     padding: 0.5rem;
-    cursor: pointer;
 }
 
-.form-group small {
+.form-help {
     display: block;
     margin-top: 0.5rem;
-    color: #6b7280;
     font-size: 0.85rem;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    color: #6b7280;
 }
 
 .form-actions {
@@ -961,49 +960,38 @@ html {
     margin-top: 2rem;
 }
 
+.form-actions .btn {
+    flex: 1;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    font-weight: 600;
+}
+
 .btn-secondary {
-    background: #f3f4f6;
+    background-color: #f3f4f6;
     color: #374151;
 }
 
 .btn-secondary:hover {
-    background: #e5e7eb;
+    background-color: #e5e7eb;
 }
 
 .btn-primary {
-    background: var(--primary-color);
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
     color: white;
-    flex: 1;
 }
 
 .btn-primary:hover {
-    background: #1e40af;
-}
-
-.form-message {
-    margin-top: 1rem;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    font-size: 0.95rem;
-    display: none;
-}
-
-.form-message.success {
-    display: block;
-    background: #d1fae5;
-    color: #065f46;
-    border: 1px solid #6ee7b7;
-}
-
-.form-message.error {
-    display: block;
-    background: #fee2e2;
-    color: #991b1b;
-    border: 1px solid #fca5a5;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .modal-content {
         width: 95%;
         max-height: 95vh;
@@ -1028,88 +1016,4 @@ html {
     .form-actions {
         flex-direction: column;
     }
-}
-
-/* Fix for trip cards layout */
-.trip-content {
-    padding: 1.5rem;
-}
-
-@media (min-width: 768px) {
-    .trip-content {
-        padding: 2rem;
-    }
-}
-
-.trip-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--border-color);
-}
-
-.trip-price {
-    text-align: left;
-}
-
-.instant-confirm {
-    font-size: 0.75rem;
-    color: var(--text-light);
-    margin-top: 0.5rem;
-}
-
-.hero-features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    animation: fadeInUp 1s ease-out 0.6s both;
-}
-
-.feature-badge {
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 9999px;
-    font-size: 0.875rem;
-    font-weight: 500;
-}
-
-.features-section {
-    padding: 5rem 0;
-    background-color: rgba(249, 250, 251, 0.5);
-}
-
-.trips-section {
-    padding: 5rem 0;
-    background-color: var(--bg-color);
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-@media (min-width: 768px) {
-    .footer-content {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.footer-section h4 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.footer-section p {
-    font-size: 0.875rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 0.5rem;
 }
