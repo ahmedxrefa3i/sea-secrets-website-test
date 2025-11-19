@@ -9,7 +9,556 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Secrets Hurghada - Red Sea Trips</title>
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="logo.jpg">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="logo.jpg" alt="Sea Secrets Logo" class="logo">
+                    <span class="logo-text">Sea Secrets Hurghada</span>
+                </div>
+                
+                <nav class="desktop-nav">
+                    <a href="#trips" class="nav-link">Our Trips</a>
+                    <a href="https://wa.me/201110890202" target="_blank" class="btn btn-contact">Contact Us</a>
+                </nav>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span class="menu-icon">☰</span>
+                </button>
+            </div>
+            
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="#trips" class="mobile-nav-link">Our Trips</a>
+                <a href="https://wa.me/201110890202" target="_blank" class="btn btn-contact">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="https://res.cloudinary.com/dupmjlta3/video/upload/v1/hero-video_rk0rkc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <h1 class="hero-title">Discover the Secrets of the Red Sea</h1>
+            <p class="hero-subtitle">Book your unforgettable sea adventure in Hurghada today</p>
+            
+            <!-- Search Card -->
+            <div class="search-card">
+                <div class="search-grid">
+                    <div class="search-field">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <div class="search-input-wrapper">
+                            <label>Destination</label>
+                            <input type="text" value="Hurghada" readonly>
+                        </div>
+                    </div>
+                    
+                    <div class="search-field">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <div class="search-input-wrapper">
+                            <label>When</label>
+                            <input type="date">
+                        </div>
+                    </div>
+                    
+                    <div class="search-field">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <div class="search-input-wrapper">
+                            <label>Guests</label>
+                            <input type="number" value="2" min="1">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn btn-search" onclick="document.getElementById('trips').scrollIntoView({behavior: 'smooth'})">
+                    Explore Available Trips
+                </button>
+            </div>
+            
+            <!-- Trust Indicators -->
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <span class="check-icon">✓</span>
+                    <span>Professional Guides</span>
+                </div>
+                <div class="trust-item">
+                    <span class="check-icon">✓</span>
+                    <span>All Equipment Included</span>
+                </div>
+                <div class="trust-item">
+                    <span class="check-icon">✓</span>
+                    <span>Delicious Meals</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-mouse"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Sea Secrets?</h2>
+                <p class="section-subtitle">We're committed to providing you with the best Red Sea experience</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">Safety First</h3>
+                    <p class="feature-description">Professional guides and top-quality equipment for your safety</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3 class="feature-title">Expert Guides</h3>
+                    <p class="feature-description">Certified instructors with years of Red Sea experience</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🍽️</div>
+                    <h3 class="feature-title">Delicious Meals</h3>
+                    <p class="feature-description">Fresh buffet lunch included with every trip</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📸</div>
+                    <h3 class="feature-title">Unforgettable Memories</h3>
+                    <p class="feature-description">Capture stunning underwater moments and island views</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trips Section -->
+    <section id="trips" class="trips">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Signature Trips</h2>
+                <p class="section-subtitle">Choose from our carefully curated selection of Red Sea adventures. Each trip is designed to give you an unforgettable experience.</p>
+            </div>
+            
+            <div class="trips-list">
+                <!-- Trip 1: Hula Hula Island -->
+                <div class="trip-card">
+                    <div class="trip-image">
+                        <img src="images/island1.jpg" alt="Hula Hula Island">
+                        <div class="trip-duration">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Full Day</span>
+                        </div>
+                    </div>
+                    <div class="trip-details">
+                        <h3 class="trip-title">Hula Hula Island Sea Trip</h3>
+                        <p class="trip-description">Experience the crystal clear shallows and white sands of Hula Hula Island</p>
+                        <ul class="trip-highlights">
+                            <li>Departure at 9 AM</li>
+                            <li>Visit Hula Hula Island (crystal clear shallows, white sands)</li>
+                            <li>First snorkeling stop to explore colorful coral gardens</li>
+                            <li>Open buffet lunch on board (dishes, drinks, fresh fruit)</li>
+                            <li>Second snorkeling site to spot schools of tropical fish</li>
+                            <li>Return to the marina</li>
+                        </ul>
+                    </div>
+                    <div class="trip-booking">
+                        <div class="trip-price">
+                            <span class="price-label">Starting from</span>
+                            <span class="price-value">Price on Request</span>
+                        </div>
+                        <button onclick="openBookingModal('Hula Hula Island Sea Trip')" class="btn btn-book">Book Now</button>
+                        <p class="booking-note">Instant confirmation via Email</p>
+                    </div>
+                </div>
+
+                <!-- Trip 2: Magawish Island -->
+                <div class="trip-card">
+                    <div class="trip-image">
+                        <img src="images/magawish.jpg" alt="Magawish Island">
+                        <div class="trip-duration">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Full Day</span>
+                        </div>
+                    </div>
+                    <div class="trip-details">
+                        <h3 class="trip-title">Magawish Island Sea Trip</h3>
+                        <p class="trip-description">Discover the golden sands and turquoise waters of Magawish Island</p>
+                        <ul class="trip-highlights">
+                            <li>Departure at 9 AM</li>
+                            <li>Visit Magawish Island (golden sands, turquoise waters)</li>
+                            <li>First snorkeling spot with vibrant coral formations</li>
+                            <li>Delicious open buffet lunch on board</li>
+                            <li>Second snorkeling location to continue the adventure</li>
+                            <li>Return to the marina</li>
+                        </ul>
+                    </div>
+                    <div class="trip-booking">
+                        <div class="trip-price">
+                            <span class="price-label">Starting from</span>
+                            <span class="price-value">Price on Request</span>
+                        </div>
+                        <button onclick="openBookingModal('Magawish Island Sea Trip')" class="btn btn-book">Book Now</button>
+                        <p class="booking-note">Instant confirmation via Email</p>
+                    </div>
+                </div>
+
+                <!-- Trip 3: Orange Island -->
+                <div class="trip-card">
+                    <div class="trip-image">
+                        <img src="images/orange.jpg" alt="Orange Island">
+                        <div class="trip-duration">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Full Day</span>
+                        </div>
+                    </div>
+                    <div class="trip-details">
+                        <h3 class="trip-title">Orange Island Sea Trip</h3>
+                        <p class="trip-description">Enjoy the shallow turquoise waters and iconic orange parasols</p>
+                        <ul class="trip-highlights">
+                            <li>Departure at 9 AM</li>
+                            <li>Visit Orange Island (shallow turquoise waters, orange parasols)</li>
+                            <li>First snorkeling site to explore coral gardens</li>
+                            <li>Freshly prepared open buffet lunch on board</li>
+                            <li>Second snorkeling location among tropical fish</li>
+                            <li>Return to the marina</li>
+                        </ul>
+                    </div>
+                    <div class="trip-booking">
+                        <div class="trip-price">
+                            <span class="price-label">Starting from</span>
+                            <span class="price-value">Price on Request</span>
+                        </div>
+                        <button onclick="openBookingModal('Orange Island Sea Trip')" class="btn btn-book">Book Now</button>
+                        <p class="booking-note">Instant confirmation via Email</p>
+                    </div>
+                </div>
+
+                <!-- Trip 4: Deep Sea Diving -->
+                <div class="trip-card">
+                    <div class="trip-image">
+                        <img src="images/diving.jpg" alt="Deep Sea Diving">
+                        <div class="trip-duration">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Full Day</span>
+                        </div>
+                    </div>
+                    <div class="trip-details">
+                        <h3 class="trip-title">Deep Sea Diving Trip</h3>
+                        <p class="trip-description">Explore the underwater world with certified diving instructors</p>
+                        <ul class="trip-highlights">
+                            <li>Departure at 9 AM</li>
+                            <li>First guided dive with a certified instructor</li>
+                            <li>Explore coral walls and diverse marine life</li>
+                            <li>(Snorkeling option available for non-divers)</li>
+                            <li>Freshly prepared open buffet lunch on board</li>
+                            <li>Second guided dive at a different site</li>
+                            <li>Return to the marina</li>
+                        </ul>
+                    </div>
+                    <div class="trip-booking">
+                        <div class="trip-price">
+                            <span class="price-label">Starting from</span>
+                            <span class="price-value">Price on Request</span>
+                        </div>
+                        <button onclick="openBookingModal('Deep Sea Diving Trip')" class="btn btn-book">Book Now</button>
+                        <p class="booking-note">Instant confirmation via Email</p>
+                    </div>
+                </div>
+
+                <!-- Trip 5: Dolphin Sea Trip -->
+                <div class="trip-card">
+                    <div class="trip-image">
+                        <img src="images/dolphin.jpg" alt="Dolphin Trip">
+                        <div class="trip-duration">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Full Day</span>
+                        </div>
+                    </div>
+                    <div class="trip-details">
+                        <h3 class="trip-title">Dolphin Sea Trip</h3>
+                        <p class="trip-description">Swim alongside wild dolphins in their natural habitat</p>
+                        <ul class="trip-highlights">
+                            <li>Departure at 9 AM</li>
+                            <li>Cruise to the Dolphin House lagoon</li>
+                            <li>Chance to swim alongside wild dolphins</li>
+                            <li>First snorkeling stop at the Dolphin House reef</li>
+                            <li>Freshly prepared open buffet lunch on board</li>
+                            <li>Second snorkeling spot in the area</li>
+                            <li>Return to the marina</li>
+                        </ul>
+                    </div>
+                    <div class="trip-booking">
+                        <div class="trip-price">
+                            <span class="price-label">Starting from</span>
+                            <span class="price-value">Price on Request</span>
+                        </div>
+                        <button onclick="openBookingModal('Dolphin Sea Trip')" class="btn btn-book">Book Now</button>
+                        <p class="booking-note">Instant confirmation via Email</p>
+                    </div>
+                </div>
+
+                <!-- Trip 6: Paradise Island -->
+                <div class="trip-card">
+                    <div class="trip-image">
+                        <img src="images/paradise.jpg" alt="Paradise Island">
+                        <div class="trip-duration">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Full Day</span>
+                        </div>
+                    </div>
+                    <div class="trip-details">
+                        <h3 class="trip-title">Paradise Island Sea Trip</h3>
+                        <p class="trip-description">Relax on white sands in the Giftun Islands National Park</p>
+                        <ul class="trip-highlights">
+                            <li>Departure at 9 AM</li>
+                            <li>Cruise to Paradise Island (Giftun Islands National Park)</li>
+                            <li>Relax on white sands and swim in teal lagoons</li>
+                            <li>First snorkeling stop off the island</li>
+                            <li>Freshly prepared open buffet lunch on board</li>
+                            <li>Second snorkeling site (chance to see rays or turtles)</li>
+                            <li>Return to the marina</li>
+                        </ul>
+                    </div>
+                    <div class="trip-booking">
+                        <div class="trip-price">
+                            <span class="price-label">Starting from</span>
+                            <span class="price-value">Price on Request</span>
+                        </div>
+                        <button onclick="openBookingModal('Paradise Island Sea Trip')" class="btn btn-book">Book Now</button>
+                        <p class="booking-note">Instant confirmation via Email</p>
+                    </div>
+                </div>
+
+                <!-- Trip 7: Private Speedboat (Special) -->
+                <div class="trip-card special-trip">
+                    <div class="trip-image">
+                        <img src="images/speedboat.jpg" alt="Private Speedboat">
+                        <div class="special-badge">
+                            <span>✨ Special Offer</span>
+                        </div>
+                        <div class="trip-duration">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>3 Hours</span>
+                        </div>
+                    </div>
+                    <div class="trip-details">
+                        <h3 class="trip-title special-title">Private Speedboat Trip</h3>
+                        <p class="trip-description">Your own private adventure with complete freedom to explore</p>
+                        <ul class="trip-highlights">
+                            <li>Duration: 3 Hours (Flexible time 9am-2pm)</li>
+                            <li>Group Size: Up to 6 People</li>
+                            <li>Complete freedom to explore at your own pace</li>
+                            <li>Visit islands or snorkel at secluded reefs</li>
+                            <li>Perfect for couples, families, or small groups</li>
+                            <li>Includes snorkeling equipment and refreshments</li>
+                        </ul>
+                    </div>
+                    <div class="trip-booking">
+                        <div class="trip-price">
+                            <span class="price-label">Starting from</span>
+                            <span class="price-value special-price">Your Private Trip</span>
+                        </div>
+                        <button onclick="openBookingModal('Private Speedboat Trip')" class="btn btn-book special-btn">Book Now</button>
+                        <p class="booking-note">Instant confirmation via Email</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-title">Sea Secrets Hurghada</h3>
+                    <p class="footer-text">Experience the magic of the Red Sea with our professional guided tours. We offer unforgettable adventures in the crystal-clear waters of Hurghada.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#trips">Our Trips</a></li>
+                        <li><a href="https://wa.me/201110890202" target="_blank">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://wa.me/201110890202" target="_blank" aria-label="WhatsApp 1">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/201117398388" target="_blank" aria-label="WhatsApp 2">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/share/1KBhNcgR5S/" target="_blank" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/sea_secret_hurghada?igsh=MWlndG0ycmhxNWY0eA==" target="_blank" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:mayghali@onetel.com" aria-label="Email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sea Secrets Hurghada. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTripName">Book Your Trip</h2>
+                <button class="modal-close" onclick="closeBookingModal()">&times;</button>
+            </div>
+            
+            <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" class="booking-form" id="bookingForm">
+                <!-- Honeypot for spam protection -->
+                <p style="display:none;">
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+                
+                <!-- Trip Name (Hidden) -->
+                <input type="hidden" id="tripName" name="trip-name">
+                
+                <!-- Email for notifications -->
+                <input type="hidden" name="_to" value="sea.secrets01@gmail.com">
+                
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="full-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="hotelName">Hotel Name *</label>
+                    <input type="text" id="hotelName" name="hotel-name" placeholder="Enter your hotel name" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bookingDate">Preferred Date *</label>
+                        <input type="date" id="bookingDate" name="booking-date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="numberOfGuests">Number of Guests *</label>
+                        <input type="number" id="numberOfGuests" name="number-of-guests" min="1" max="50" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="passportImage">Passport Image *</label>
+                    <input type="file" id="passportImage" name="passport-image" accept="image/*,.pdf" required>
+                    <small class="form-help">Upload a clear photo of your passport (Max 10MB)</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="specialRequests">Special Requests (Optional)</label>
+                    <textarea id="specialRequests" name="special-requests" rows="3"></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeBookingModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Submit Booking</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
     <!-- Favicon -->
     <link rel="icon" href="logo.jpg">
     
